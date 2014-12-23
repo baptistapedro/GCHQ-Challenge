@@ -1,7 +1,6 @@
 import re
 import itertools
 import pprint
-import unittest
 
 
 class BasicCipher(object):
