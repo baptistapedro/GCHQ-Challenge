@@ -2,7 +2,6 @@ import re
 import itertools
 import pprint
 
-
 class BasicCipher(object):
     """ 
     Transposed Cipher,
@@ -17,18 +16,15 @@ class BasicCipher(object):
         self.word = re.sub(r'\s+', '', self.word)
         self.word = list(self.word)
 
-    
     def __len__(self):
         return len(self.word)
-
-    
+        
     def factors(self):
         """
         Find all factors of a number.
         """
         return [x for x in range(2, len(self)//2+1) if len(self)%x == 0]
 
-    
     def split_seq(self, iterable, size):
         """
         give the ability to split the item with any size
@@ -45,8 +41,7 @@ class BasicCipher(object):
             yield item
             item = list(itertools.islice(it, size))
      
-    
-    def _result(self):
+        def _result(self):
         """ Get a list splitted, then join it in the vertical.
         [[b, b, b],
         [a, c, d],
